@@ -1,6 +1,6 @@
 {
-  "name": "react-transition-group",
-  "version": "2.3.0-beta.0",
+  "name": "react-transition-group-nopeer",
+  "version": "1.0.0",
   "description": "A react component toolset for managing animations",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "testonly": "jest --verbose",
     "tdd": "jest --watch",
     "build": "rimraf lib && babel src --out-dir lib && npm run build:dist && cp README.md LICENSE ./lib",
-    "build:dist": "rimraf lib/dist && webpack && NODE_ENV=production webpack -p",
+    "build:dist": "rimraf lib/dist && webpack && webpack -p",
     "lint": "eslint src test",
     "release": "release",
     "release:next": "release --preid beta --tag next",
